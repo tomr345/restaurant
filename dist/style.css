@@ -5,8 +5,13 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 :root {
     --blue: #0b296e;
+    --main-padding: 16rem;
 }
 
 body {
@@ -16,9 +21,43 @@ body {
 #content {
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 0.7fr 5fr;
 }
 
 .header {
     background-color: var(--blue);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 3rem;
 }
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.main {
+    padding: 1rem var(--main-padding) 1rem var(--main-padding);
+    font-size: 1.5rem;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
