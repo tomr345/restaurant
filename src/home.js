@@ -1,8 +1,9 @@
 function generateHomepage() {
     const content = document.getElementById('content');
-    content.appendChild(generateHeader());
-    content.appendChild(generateNav());
-    content.appendChild(generateIntro());
+    // content.appendChild(generateHeader());
+    // content.appendChild(generateNav());
+    // content.appendChild(generateIntro());
+    content.append(generateHeader(), generateNav(), generateIntro());
 }
 
 function generateHeader() {
@@ -15,7 +16,6 @@ function generateHeader() {
 function generateNav() {
     const nav = document.createElement('div');
     nav.classList.add('nav');
-
     nav.appendChild(createNavTab('tab', 'home', 'Home'));
     nav.appendChild(createNavTab('tab', 'menu', 'Menu'));
     nav.appendChild(createNavTab('tab', 'contact', 'Contact'));
